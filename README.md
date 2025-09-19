@@ -39,3 +39,10 @@ FastAPI backend for *Mini Model Studio*. Provides endpoints to manage model prof
   - System prompts and AI calls are controlled server-side.
   
   - API keys are never exposed to the frontend.
+
+# Setup
+ - Install requirements
+ - run
+   ``
+   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+   ``
