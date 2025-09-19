@@ -42,6 +42,18 @@ FastAPI backend for *Mini Model Studio*. Provides endpoints to manage model prof
 
 # Setup
  - Install requirements
+ - Setup .env
+    ```
+    
+    DATABASE_URL=postgresql://postgres:<password>.supabase.co:5432/postgres
+ 
+    OPENAI_API_KEY= <your_key>
+    ANTHROPIC_API_KEY= <your_key>
+    
+    CONTEXT_WINDOW=20        # number of last messages to send to model
+    NEXT_ORIGIN=http://localhost:3000  # origin for Next.js app during dev (CORS)
+    ALLOW_MOCK=false         # set to "true" to allow mock responses locally (dev only)
+   ```
  - run
    ``
    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
